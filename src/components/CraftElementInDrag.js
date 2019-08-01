@@ -1,15 +1,9 @@
 import React, { useEffect, useState, memo } from 'react'
 import CraftElement from './CraftElement'
 
-const styles = {
-  display: 'inline-block',
-  height: '10px',
-  width: '10px'
-//   transform: 'rotate(-7deg)',
-//   WebkitTransform: 'rotate(-7deg)',
-}
 
-const CraftElementInDrag = memo(({ path, title }) => {
+
+const CraftElementInDrag = memo(({ path, title, height }) => {
   const [tickTock, setTickTock] = useState(false)
   
   useEffect(
@@ -19,9 +13,17 @@ const CraftElementInDrag = memo(({ path, title }) => {
     },
     [tickTock],
   )
+
+  const styles = {
+    display: 'inline-block',
+    // height: height,
+  //   transform: 'rotate(-7deg)',
+  //   WebkitTransform: 'rotate(-7deg)',
+  }
+
   return (
     <div style={styles}>
-      <CraftElement path={path} title={title} />
+      <CraftElement path={path} title={title} height={height}/>
     </div>
   )
 })

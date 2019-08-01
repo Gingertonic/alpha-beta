@@ -6,6 +6,7 @@ import './styles/index.css';
 import './styles/App.css';
 import CraftBoard from './containers/CraftBoard';
 import CustomDragLayer from './containers/CustomDragLayer';
+import RSVP from './containers/RSVP';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 <header className="App-header">
                     <CraftBoard />
                     <CustomDragLayer />
+                    <RSVP />
                 </header>
             </DndProvider>
         </div>

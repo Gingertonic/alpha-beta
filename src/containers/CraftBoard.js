@@ -13,20 +13,26 @@ function renderElement(item, key) {
 }
 
 const styles = {
-  width: "100vw",
-  height: "100vh",
-  border: '1px solid black',
+  // width: "100vw",
+  // height: "100vh",
+  // border: '1px solid black',
   position: 'relative',
 }
 
 const CraftBoard = () => {
+    const vpheight = window.innerHeight;
+    const vpwidth = window.innerWidth;
 
     const [elements, setElements] = useState({
-        date: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: '30-4-20'},
-        city: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringTwo.png', title: 'London'},
-        header: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: "AB"},
-        ceremony: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringTwo.png', title: "Српска православна црква"},
-        reception: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: "Kew Gardens"},
+        bookmark: { top: vpheight*-0.1, left: vpwidth*0.44, path: 'images/mark.png', title: 'bookmark', height: '80vh'},
+        date: { top: vpheight*0.15, left: vpwidth*0.23, path: 'images/date.png', title: '30-4-20', height: '10vh'},
+        city: { top: vpheight*0.31, left: vpwidth*0.22, path: 'images/bigben.png', title: 'London', height: '50vh'},
+        ceremony: { top: vpheight*0.33, left: vpwidth*0.30, path: 'images/cirilica.png', title: "Српска православна црква", height: '20vh'},
+        reception: { top: vpheight*0.52, left: vpwidth*0.31, path: 'images/kew.png', title: "Kew Gardens", height: '30vh'},
+        player1: { top: vpheight*0.12, left: vpwidth*0.518, path: 'images/A.png', title: "A", height: '16vh'},
+        player2: { top: vpheight*0.33, left: vpwidth*0.518, path: 'images/B.png', title: "B", height: '16vh'},
+        ringOne: { top: vpheight*0.12, left: vpwidth*0.67, path: 'images/ringOne.png', title: "A Ring", height: '18vh'},
+        ringTwo: { top: vpheight*0.19, left: vpwidth*0.63, path: 'images/ringOne.png', title: "Another Ring", height: '17vh'},
     })
 
     const moveElement = useCallback(

@@ -42,7 +42,7 @@ const CustomDragLayer = props => {
   function renderItem() {
     switch (itemType) {
       case Elements.ELEMENT:
-        return <CraftElementInDrag path={item.path} title={item.title} />
+        return <CraftElementInDrag path={item.path} title={item.title} height={item.height} />
       default:
         return null
     }

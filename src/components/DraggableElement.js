@@ -17,9 +17,9 @@ function getStyles(left, top, isDragging) {
   }
 }
 const DraggableElement = props => {
-  const { id, path, title, left, top } = props
+  const { id, path, title, left, top, height } = props
   const [{ isDragging }, drag, preview] = useDrag({
-    item: { type: Elements.ELEMENT, id, left, top, title, path },
+    item: { type: Elements.ELEMENT, id, left, top, title, path, height },
     collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
@@ -29,7 +29,7 @@ const DraggableElement = props => {
   }, [])
   return (
     <div ref={drag} style={getStyles(left, top, isDragging)}>
-      <CraftElement path={path} title={title} />
+      <CraftElement path={path} title={title} height={height}/>
     </div>
   )
 }
