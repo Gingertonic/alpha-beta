@@ -25,7 +25,7 @@ function getItemStyles(initOffset, currentOffset) {
     }
 }
 
-const DragLayer = props => {
+const CustomDragLayer = props => {
 
     const { itemType, isDragging, item, initOffset, currentOffset } = useDragLayer(monitor => ({
         item: monitor.getItem(),
@@ -57,6 +57,6 @@ const DragLayer = props => {
     )
 };
 
-export default DragLayer;
+export default CustomDragLayer;
 
 // onDragStart={e => props.dragIt(e)}
