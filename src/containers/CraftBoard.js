@@ -1,32 +1,36 @@
 // const renderCraftElements = elements.map((e, idx) => < CraftElement key={idx} idTag={e.idTag} text={e.text} dragIt={dragIt} moveIt={moveIt} allowDrop={allowDrop} dropIt={dropIt}/>)
 // {renderCraftElements}
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDrop } from 'react-dnd';
-import CraftElement from '../components/CraftElement';
+import DraggableElement from '../components/DraggableElement';
 import ElementTypes from '../elements';
-import ringOne from '../images/ringOne.png';
-import ringTwo from '../images/ringTwo.png';
+// import ringOne from '../images/ringOne.png';
+// import ringTwo from '../images/ringTwo.png';
 import update from 'immutability-helper';
 
+function renderElement(item, key) {
+  return <DraggableElement key={key} id={key} {...item} />
+}
 
+const styles = {
+  width: "100vw",
+  height: "100vh",
+  border: '1px solid black',
+  position: 'relative',
+}
 
 const CraftBoard = () => {
-    const styles = {
-        width: "100vw",
-        height: "100vh",
-        border: '1px solid black',
-        position: 'relative',
-      }
 
     const [elements, setElements] = useState({
-        date: { top: Math.random(10)*500, left: Math.random(10)*500, title: '30-4-20'},
-        city: { top: Math.random(10)*500, left: Math.random(10)*500, title: 'London'},
-        header: { top: Math.random(10)*500, left: Math.random(10)*500, title: "AB"},
-        ceremony: { top: Math.random(10)*500, left: Math.random(10)*500, title: "Српска православна црква"},
-        reception: { top: Math.random(10)*500, left: Math.random(10)*500, title: "Kew Gardens"},
+        date: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: '30-4-20'},
+        city: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringTwo.png', title: 'London'},
+        header: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: "AB"},
+        ceremony: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringTwo.png', title: "Српска православна црква"},
+        reception: { top: Math.random(10)*500, left: Math.random(10)*500, path: 'ringOne.png', title: "Kew Gardens"},
     })
 
-    const moveElement = (id, left, top) => {
+    const moveElement = useCallback(
+      (id, left, top) => {
         setElements(
           update(elements, {
             [id]: {
@@ -34,7 +38,8 @@ const CraftBoard = () => {
             },
           }),
         )
-      }
+      }, [elements]
+    )
 
     const [, drop] = useDrop({
         accept: ElementTypes.ELEMENT,
@@ -50,22 +55,10 @@ const CraftBoard = () => {
     return (
         <div id={"craftboard"} ref={drop} style={styles}>
            <div className="rings">
-                 <img src={ringOne} className="App-logo" alt="ring" />
-                 <img src={ringTwo} className="App-logo-rev" alt="ring two" />
+                 {/* <img src={ringOne} className="App-logo" alt="ring" />
+                 <img src={ringTwo} className="App-logo-rev" alt="ring two" /> */}
             </div>
-            { Object.keys(elements).map(key => {
-                const { left, top, title } = elements[key]
-                return (
-                <CraftElement
-                    key={key}
-                    id={key}
-                    left={left}
-                    top={top}
-                >
-                    {title}
-                </CraftElement>
-                )
-            })}
+            { Object.keys(elements).map(key => renderElement(elements[key], key)) }
          </div>
     )
 } 
