@@ -1,28 +1,29 @@
-import React from 'react';
+import React from 'react'
+import { useDrag } from 'react-dnd'
+import ElementTypes from '../elements';
 
-const CraftElement = props => {
-      
+const style = {
+  position: 'absolute',
+  padding: '0.5rem 1rem',
+  cursor: 'move',
+}
+
+const CraftElement = ({ id, left, top, children }) => {
+    const [{ isDragging }, drag] = useDrag({
+      item: { id, left, top, type: ElementTypes.ELEMENT },
+      collect: monitor => ({
+        isDragging: monitor.isDragging(),
+      }),
+    })
+    if (isDragging) {
+        return <div ref={drag} />
+      }
     return (
-        // <div className={"dz"} onDragOver={e => props.allowDrop(e)} onDrop={e => props.dropIt(e)}>
-            <div 
-                // className="shuffle" 
-                // ref={drag} 
-                // style={{
-                //     opacity: isDragging ? 0.5 : 1,
-                //     fontSize: 25,
-                //     fontWeight: 'bold',
-                //     cursor: 'move'
-                // }} 
-                // id={props.idTag} 
-                // draggable="true" 
-                // onClick={() => props.moveIt(props.idTag)}
-            >
-                {/* {props.text} */}
-                {props.title}
-            </div>
-        // </div>
+      <div ref={drag} style={{ ...style, left, top }}>
+        {children}
+      </div>
     )
-};
+  }
 
 export default CraftElement;
 

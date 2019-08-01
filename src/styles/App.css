@@ -34,8 +34,6 @@ font-family: 'Poiret One', cursive; */
   background-size: cover;
   min-height: 100vh;
 
-  /* align-items: center;
-  justify-content: center; */
   font-size: calc(40px + 2vmin);
   color: white;
   text-shadow: 2px 2px silver;
@@ -61,12 +59,12 @@ font-family: 'Poiret One', cursive; */
   }
 }
 
-/* .shuffle {
+.shuffle {
   transition:  3s;
-  position: absolute;
+  /* position: absolute; */
   left: random(500);
   top: random(500);
-} */
+}
 
 /* .dz{
   border: 2px solid blue;

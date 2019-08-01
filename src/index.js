@@ -5,7 +5,6 @@ import HTML5Backend from 'react-dnd-html5-backend'
 import './styles/index.css';
 import './styles/App.css';
 import CraftBoard from './containers/CraftBoard';
-import DragLayer from './containers/DragLayer';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
             <DndProvider backend={HTML5Backend}>
                 <header className="App-header">
                     <CraftBoard />
-                    <DragLayer />
                 </header>
             </DndProvider>
         </div>
