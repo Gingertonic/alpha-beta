@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Italianno|La+Belle+Aurore|League+Script|Meddon|Norican&display=swap');
+/* font-family: 'Italianno', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Norican', cursive;
+font-family: 'La Belle Aurore', cursive;
+font-family: 'Meddon', cursive;
+font-family: 'League Script', cursive; */
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Pacifico|Playfair+Display|Poiret+One&display=swap');
+/* font-family: 'Playfair Display', serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poiret One', cursive; */
+
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  /* animation: App-logo-spin infinite 100s linear; */
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-logo-rev {
+  /* animation: App-logo-spin infinite 100s linear reverse; */
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* .App-header  */
+#craftboard {
+  /* background-color: #D4AF37; */
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  font-size: calc(20px + 1vmin);
+  color: darkgray;
+  text-shadow: 2px 2px silver;
+  /* font-family: 'Bad Script', cursive; */
+  font-family: 'Homemade Apple', cursive;
+/* font-family: 'League Script', cursive;  */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Poiret One', cursive; */
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shuffle {
+  transition:  3s;
+  /* position: absolute; */
+  left: random(500);
+  top: random(500);
+}
+
+/* .dz{
+  border: 2px solid blue;
+  height: 100px;
+  width: 100px;
+} */
+
+/* #craftboard {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid green;
+} */
+
+#rsvp {
+  display: inline;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  border: 1px solid palevioletred;
+  position: absolute;
+  /* height: 30vh; */
+  width: 45vw;
+  color: darkgray;
+  text-align: right;
+}
