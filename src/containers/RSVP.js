@@ -4,11 +4,6 @@ import UserID from '../secrets';
 
 
 const RSVP = () => {
-   
-    // const [name, status] = useState({
-    //     name: "",
-    //     status: "cannot"
-    // })
 
     const [details, setDetails] = useState({
         name: "",
@@ -37,7 +32,6 @@ const RSVP = () => {
           .then(res => {
             setDetails({...details, formEmailSent: true})
           })
-          // Handle errors here however you like, or use a React error boundary
           .catch(err => {
               console.error('Failed to send feedback. Error: ', err)
               alert("That didn't come through! Try again!")
@@ -61,8 +55,9 @@ const RSVP = () => {
 
 
     return (
+        
         <div id={"rsvp"}>
-           <form className="rsvp-form" onSubmit={handleSubmit}>
+           <form className="rsvp-form" onSubmit={handleSubmit} id="rsvp-form">
                 <div className="form-check">
                     <label>
                     I'll be there! 

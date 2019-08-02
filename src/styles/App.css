@@ -11,23 +11,10 @@ font-family: 'League Script', cursive; */
 font-family: 'Pacifico', cursive;
 font-family: 'Poiret One', cursive; */
 
-/* .App {
-  text-align: center;
-} */
-
-.App-logo {
-  /* animation: App-logo-spin infinite 100s linear; */
-  height: 40vmin;
-  pointer-events: none;
+.App-header {
+  display: inline;
+  position: relative;
 }
-
-.App-logo-rev {
-  /* animation: App-logo-spin infinite 100s linear reverse; */
-  height: 40vmin;
-  pointer-events: none;
-}
-
-/* .App-header  */
 #craftboard {
   /* background-color: #D4AF37; */
   display: flex;
@@ -66,27 +53,26 @@ font-family: 'Poiret One', cursive; */
   top: random(500);
 }
 
-/* .dz{
-  border: 2px solid blue;
-  height: 100px;
-  width: 100px;
-} */
-
-/* #craftboard {
-  height: 100vh;
-  width: 100vw;
-  border: 1px solid green;
-} */
-
 #rsvp {
-  display: inline;
-  z-index: 10;
-  bottom: 0;
-  right: 0;
-  border: 1px solid palevioletred;
+  /* display: inline; */
   position: absolute;
+  /* top: 40;
+  left: 20; */
+  border: 1px solid yellow;
+  width: 100vw;
+  height: 100vh;
+}
+
+#rsvp-form {
+  position: absolute;
+  top: 40;
+  left: 20;
+  z-index: 100;
+  
+  border: 1px solid palevioletred;
+  
   /* height: 30vh; */
-  width: 45vw;
+  width: 20vw;
   color: darkgray;
   text-align: right;
 }

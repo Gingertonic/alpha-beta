@@ -6,7 +6,7 @@ import './styles/index.css';
 import './styles/App.css';
 import CraftBoard from './containers/CraftBoard';
 import CustomDragLayer from './containers/CustomDragLayer';
-// import RSVP from './containers/RSVP';
+import RSVP from './containers/RSVP';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         <div className="App">
             <DndProvider backend={HTML5Backend}>
                 <header className="App-header">
-                    <CraftBoard />
-                    <CustomDragLayer />
-                    {/* <RSVP /> */}
+                    {/* <CraftBoard />
+                    <CustomDragLayer /> */}
+                    <RSVP />
                 </header>
             </DndProvider>
         </div>
