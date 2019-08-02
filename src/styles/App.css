@@ -79,14 +79,14 @@ font-family: 'Poiret One', cursive; */
 } */
 
 #rsvp {
-  display: inline;
+
   z-index: 10;
-  bottom: 0;
-  right: 0;
+  /* margin-bottom: 20vh;
+  margin-right: 30vh; */
   border: 1px solid palevioletred;
-  position: absolute;
+  position: relative;
   /* height: 30vh; */
-  width: 45vw;
+  width: 50vw;
   color: darkgray;
   text-align: right;
 }

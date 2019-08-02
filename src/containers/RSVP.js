@@ -61,7 +61,7 @@ const RSVP = () => {
 
 
     return (
-        <div id={"rsvp"}>
+        <div id={"rsvp"} className="interaction">
            <form className="rsvp-form" onSubmit={handleSubmit}>
                 <div className="form-check">
                     <label>

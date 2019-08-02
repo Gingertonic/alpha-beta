@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDrag } from 'react-dnd'
 import Elements from '../elements'
 import { getEmptyImage } from 'react-dnd-html5-backend'
@@ -18,17 +18,28 @@ function getStyles(left, top, isDragging) {
 }
 const DraggableElement = props => {
   const { id, path, title, left, top, height } = props
+
   const [{ isDragging }, drag, preview] = useDrag({
     item: { type: Elements.ELEMENT, id, left, top, title, path, height },
     collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
   })
+
+  const [flip, setFlip] = useState(true);
+  const changeOrientation = () => { setFlip(!flip) }
+
   useEffect(() => {
-    preview(getEmptyImage(), { captureDraggingState: true })
+    preview(getEmptyImage(), { captureDraggingState: true });
+    window.addEventListener("orientationchange", changeOrientation);
   }, [])
+
+  // useEffect(() => {
+  //   window.addEventListener("orientationchange", changeOrientation);
+  // });
+
   return (
-    <div ref={drag} style={getStyles(left, top, isDragging)}>
+    <div className="interaction" ref={drag} style={getStyles(left, top, isDragging)}>
       <CraftElement path={path} title={title} height={height}/>
     </div>
   )

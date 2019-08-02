@@ -16,3 +16,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#orientation {
+  width: 100vw;
+  text-align: center;
+  margin-top: 45vh;
+}
+
+@media (orientation: portrait) {
+  #orientation { display: block; }
+  .interaction  { display: none; }
+  }
+
+@media (orientation: landscape) {
+  #orientation  { display: none; }
+  .interaction { display: block; }
+}
