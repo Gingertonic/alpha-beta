@@ -46,6 +46,11 @@ const RSVP = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        if(details.status === "" && details.name === "") {
+            alert(`Please let us know your name and if you can come!`)
+            return null;
+        }
+
         alert(`Now chosen ${details.status}`)
 
         const template = "template_shuPpkdS"
@@ -101,22 +106,25 @@ const RSVP = () => {
                     />
                     </label>
                 </div>
+                <br />
+                <div id="submit-container" >
+                    <div className="name-input">
+                        <input
+                            type="text"
+                            id="name-input"
+                            value={details.name}
+                            placeholder="Your name(s)"
+                            onChange={handleNameChange}
+                            className="form-check-input"
+                        />
+                    </div>
 
-                <div className="name-input">
-                    <input
-                        type="text"
-                        value={details.name}
-                        placeholder="Your name(s)"
-                        onChange={handleNameChange}
-                        className="form-check-input"
-                    />
-                </div>
-
-                <div className="form-group">
-                    <button className="btn btn-primary mt-2" type="submit">
-                    Save The Date!
-                    </button>
-                </div>
+                    <div className="form-group">
+                        <button className="saveTheDate" type="submit">
+                            <img className="saveTheDate" src="images/stamp.png" alt="save the date" />
+                        </button>
+                    </div>
+                 </div>
             </form>
 
          </div>

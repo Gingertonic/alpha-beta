@@ -17,7 +17,7 @@ function App() {
 
                 <div className="App">
                     {/* <DndProvider backend={HTML5Backend}> */}
-                    <DndProvider backend={TouchBackend}>
+                    <DndProvider backend={TouchBackend} options={{enableMouseEvents: true}}>
                         <header className="App-header">
                             <CraftBoard />
                             <CustomDragLayer />

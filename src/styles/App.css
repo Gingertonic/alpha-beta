@@ -36,10 +36,10 @@ font-family: 'Poiret One', cursive; */
 
   font-size: calc(20px + 1vmin);
   color: darkgray;
-  text-shadow: 2px 2px silver;
+  /* text-shadow: 2px 2px silver; */
   /* font-family: 'Bad Script', cursive; */
-  font-family: 'Homemade Apple', cursive;
-/* font-family: 'League Script', cursive;  */
+  /* font-family: 'Homemade Apple', cursive; */
+font-family: 'League Script', cursive; 
 /* font-family: 'Playfair Display', serif; */
 /* font-family: 'Pacifico', cursive; */
 /* font-family: 'Poiret One', cursive; */
@@ -83,10 +83,40 @@ font-family: 'Poiret One', cursive; */
   z-index: 10;
   /* margin-bottom: 20vh;
   margin-right: 30vh; */
-  border: 1px solid palevioletred;
+  bottom: 0;
+  right: 0;
+  /* border: 1px solid palevioletred; */
   position: relative;
   /* height: 30vh; */
-  width: 50vw;
-  color: darkgray;
+  width: 30vw;
+  /* height: 30vh; */
+  color: white;
   text-align: right;
+  /* font-family: 'Pacifico', cursive; */
+}
+
+.saveTheDate {
+  height: 10vh;
+  background-color: rgba(0,0,0,0);
+  transform: rotate(-7deg);
+  border: none;
+}
+
+#name-input {
+  /* background-color: rgba(0,255,0,0.3); */
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: #61dafb 1px dashed;
+  font-family: 'League Script', cursive;
+  font-size: 1em;
+}
+
+input:focus { 
+  outline: none;
+}
+
+#submit-container {
+  display: flex;
+  justify-content: space-around;
 }
