@@ -7,6 +7,7 @@ import ElementTypes from '../elements';
 // import ringOne from '../images/ringOne.png';
 // import ringTwo from '../images/ringTwo.png';
 import update from 'immutability-helper';
+import RSVP from './RSVP';
 
 function renderElement(item, key) {
   return <DraggableElement key={key} id={key} {...item} />
@@ -60,11 +61,8 @@ const CraftBoard = () => {
 
     return (
         <div id={"craftboard"} ref={drop} style={styles}>
-           <div className="rings">
-                 {/* <img src={ringOne} className="App-logo" alt="ring" />
-                 <img src={ringTwo} className="App-logo-rev" alt="ring two" /> */}
-            </div>
             { Object.keys(elements).map(key => renderElement(elements[key], key)) }
+            <RSVP />
          </div>
     )
 } 

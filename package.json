@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "emailjs-com": "^2.3.2",
     "immutability-helper": "^3.0.1",
     "react": "^16.8.6",
     "react-dnd": "^9.3.2",
