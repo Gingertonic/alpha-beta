@@ -46,7 +46,7 @@ const RSVP = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if(details.status === "" && details.name === "") {
+        if(details.status === "" || details.name === "") {
             alert(`Please let us know your name and if you can come!`)
             return null;
         }
