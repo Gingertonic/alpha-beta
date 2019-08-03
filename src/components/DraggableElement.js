@@ -26,17 +26,10 @@ const DraggableElement = props => {
     }),
   })
 
-  const [flip, setFlip] = useState(true);
-  const changeOrientation = () => { setFlip(!flip) }
-
   useEffect(() => {
-    preview(getEmptyImage(), { captureDraggingState: true });
-    window.addEventListener("orientationchange", changeOrientation);
+    preview(getEmptyImage(), { captureDraggingState: true })
   }, [])
 
-  // useEffect(() => {
-  //   window.addEventListener("orientationchange", changeOrientation);
-  // });
 
   return (
     <div className="interaction" ref={drag} style={getStyles(left, top, isDragging)}>

@@ -37,7 +37,7 @@ font-family: 'Poiret One', cursive; */
   min-width: 100vw;
 
   font-size: calc(20px + 1vmin);
-  color: darkgray;
+  color: rgb(19, 36, 19);
   /* text-shadow: 2px 2px silver; */
   /* font-family: 'Bad Script', cursive; */
   /* font-family: 'Homemade Apple', cursive; */
@@ -61,13 +61,6 @@ font-family: 'League Script', cursive;
   }
 }
 
-.shuffle {
-  transition:  3s;
-  /* position: absolute; */
-  left: random(500);
-  top: random(500);
-}
-
 /* .dz{
   border: 2px solid blue;
   height: 100px;
@@ -81,19 +74,19 @@ font-family: 'League Script', cursive;
 } */
 
 #rsvp {
-
-  z-index: 10;
+  font-size: 3vh;
+  z-index: 0;
   /* margin-bottom: 20vh;
   margin-right: 30vh; */
   bottom: 0;
   right: 0;
   /* border: 1px solid palevioletred; */
-  position: relative;
+  position: absolute;
   /* height: 30vh; */
-  width: 30vw;
-  /* height: 30vh; */
-  color: white;
-  text-align: right;
+  width: 63vw;
+  height: 60vh;
+  color: rgb(19, 36, 19);
+  text-align: center;
   /* font-family: 'Pacifico', cursive; */
 }
 
@@ -106,7 +99,6 @@ font-family: 'League Script', cursive;
 
 #name-input {
   /* background-color: rgba(0,255,0,0.3); */
-  color: white;
   background-color: rgba(0,0,0,0);
   border: none;
   border-bottom: #61dafb 1px dashed;
@@ -150,4 +142,8 @@ input[type=checkbox]:checked:after {
   content: "\2714";
   padding: -5px;
   font-weight: bold;
+}
+
+.interaction {
+  z-index: 5;
 }
