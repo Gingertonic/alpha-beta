@@ -69,23 +69,25 @@ const RSVP = () => {
         <div id={"rsvp"} className="interaction">
            <form className="rsvp-form" onSubmit={handleSubmit}>
                 <div className="form-check">
-                    <label>
+                    <label className="checkbox">
                     I'll be there! 
                     <input
-                        type="radio"
+                        type="checkbox"
                         value="can"
                         checked={details.status === "can"}
                         onChange={handleStatusChange}
                         className="form-check-input"
                     />
+                    <span>
+                    </span>
                     </label>
                 </div>
 
                 <div className="form-check">
                     <label>
-                    I hope to be there... 
+                    I hope to be there...     
                     <input
-                        type="radio"
+                        type="checkbox"
                         value="may"
                         checked={details.status === "may"}
                         onChange={handleStatusChange}
@@ -98,7 +100,7 @@ const RSVP = () => {
                     <label>
                     I can't make it. 
                     <input
-                        type="radio"
+                        type="checkbox"
                         value="cannot"
                         checked={details.status === "cannot"}
                         onChange={handleStatusChange}

@@ -1,3 +1,5 @@
+/* @import '~pretty-checkbox/src/pretty-checkbox.scss'; */
+
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Italianno|La+Belle+Aurore|League+Script|Meddon|Norican&display=swap');
 /* font-family: 'Italianno', cursive;
 font-family: 'Homemade Apple', cursive;
@@ -116,7 +118,36 @@ input:focus {
   outline: none;
 }
 
-#submit-container {
-  display: flex;
-  justify-content: space-around;
+/* input[type=checkbox] {
+  transform: scale(1.5);
+} */
+
+input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  visibility: hidden;
+}
+
+input[type=checkbox]:after {
+  content: " ";
+  background-color: rgba(10,250,10,0.3);
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  color: rgba(27, 24, 24, 0.8);
+  width: 1vw;
+  height: 1vw;
+  visibility: visible;
+  /* border: 1px solid #; */
+  padding-left: 3px;
+  border-radius: 5px;
+}
+
+input[type=checkbox]:checked:after {
+  content: "\2714";
+  padding: -5px;
+  font-weight: bold;
 }
