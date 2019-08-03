@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
@@ -13,6 +13,10 @@ import OrientationWarning from './components/OrientationWarning';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
+    useEffect(() => {
+        alert("We're getting married!\n\nOfficial invites to come in Autumn but we'd love to know if you think you could come. Tick a green box and hit the Save the Date stamp to let us know.\n\nPlease enjoy rearranging the scrapbook too!\n(Best enjoyed on a non-mobile device!)\n\nLove, Beth & Aleksandar")
+      })
+
     return (
 
                 <div className="App">

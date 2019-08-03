@@ -40,18 +40,21 @@ const RSVP = () => {
           // Handle errors here however you like, or use a React error boundary
           .catch(err => {
               console.error('Failed to send feedback. Error: ', err)
-              alert("That didn't come through! Try again!")
+              alert("Oops, that didn't come through! Please try again!")
           })
       }
 
     const handleSubmit = e => {
         e.preventDefault();
-        if(details.status === "" || details.name === "") {
+        if(details.formEmailSent) {
+            alert(`You already let us know that you ${details.status} come, ${details.name}! If you wish to update your reply, please contact us directly.`)
+            return null;
+        } else if(details.status === "" || details.name === "") {
             alert(`Please let us know your name and if you can come!`)
             return null;
         }
 
-        alert(`Now chosen ${details.status}`)
+        alert(`Thank you for letting us know that you ${details.status} come to our wedding, ${details.name}! If your plans change, please send an email or message direct to either Beth or Aleks!`)
 
         const template = "template_shuPpkdS"
 
@@ -61,7 +64,7 @@ const RSVP = () => {
           details.status
         )
 
-        setDetails({...details, name: "", status: "", submitted: true})
+        setDetails({...details, submitted: true})
     }
 
 
@@ -122,8 +125,8 @@ const RSVP = () => {
                     </div>
 
                     <div className="form-group">
-                        <button className="saveTheDate" type="submit">
-                            <img className="saveTheDate" src="images/stamp.png" alt="save the date" />
+                        <button className={details.formEmailSent ? "saveTheDateClicked" : "saveTheDate"} type="submit">
+                            <img className={details.formEmailSent ? "saveTheDateClicked" : "saveTheDate"}  src="images/stamp.png" alt="save the date" />
                         </button>
                     </div>
                  </div>
