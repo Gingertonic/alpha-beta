@@ -19,8 +19,10 @@ code {
 
 #orientation {
   width: 100vw;
-  text-align: center;
   margin-top: 45vh;
+  margin-left: 25vw;
+  font-size: 1em;
+  text-align: center;
 }
 
 @media (orientation: portrait) {

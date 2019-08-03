@@ -9,10 +9,12 @@ const OrientationWarning = () => {
     cursor: 'pointer'
   }
 
+  const text = `Please\trotate\n    your\t   screen!`
+
     // return <div style={{ ...styles }}>{title}</div>
     return (
         <div id="orientation">
-            Please rotate your screen!
+          {text}
         </div>
     )
 }
