@@ -53,16 +53,16 @@ const CraftBoard = () => {
     }
 
     const [elements, setElements] = useState({  
-      bookmark: { top: vpheight*-0.1, left: vpwidth*0.40, path: 'images/mark.png', title: 'bookmark', height: '80vh'},
+      bookmark: { top: vpheight*-0.1, left: vpwidth*0.37, path: 'images/bookmark.png', title: 'bookmark', height: '80vh'},
       player1: { top: vpheight*0.12, left: vpwidth*0.48, path: 'images/A.png', title: "A", height: '16vh'},
       player2: { top: vpheight*0.33, left: vpwidth*0.48, path: 'images/B.png', title: "B", height: '16vh'},
       city: { top: vpheight*0.31, left: vpwidth*0.22, path: 'images/bigben.png', title: 'London', height: '50vh'},
-      date: { top: vpheight*0.15, left: vpwidth*0.23, path: 'images/date.png', title: '30-4-20', height: '10vh'},
-      ceremony: { top: vpheight*0.33, left: vpwidth*0.28, path: 'images/cirilica.png', title: "Српска православна црква", height: '20vh'},
-      polaroid1: { top: vpheight*0.69, left: vpwidth*0.46, path: 'images/osterley-polaroid.png', title: 'Osterley, London', height: '30vh'},
-      polaroid2: { top: vpheight*0.70, left: vpwidth*0.49, path: 'images/plitvice-polaroid.png', title: 'Plitvice Lakes, Croatia', height: '30vh'},
-      polaroid3: { top: vpheight*0.69, left: vpwidth*0.52, path: 'images/batur-polaroid.png', title: 'Mt Batur, Bali', height: '30vh'},
-      reception: { top: vpheight*0.52, left: vpwidth*0.31, path: 'images/kew.png', title: "Kew Gardens", height: '30vh'},
+      date: { top: vpheight*-0.05, left: vpwidth*0.15, path: 'images/date-gold.png', title: '30-4-20', height: '50vh'},
+      ceremony: { top: vpheight*0.33, left: vpwidth*0.3, path: 'images/cirilica-backed.png', title: "Српска православна црква", height: '21vh'},
+      reception: { top: vpheight*0.52, left: vpwidth*0.26, path: 'images/newkew.png', title: "Kew Gardens", height: '30vh'},
+      polaroid1: { top: vpheight*0.64, left: vpwidth*0.45, path: 'images/osterley-polaroid.png', title: 'Osterley, London', height: '30vh'},
+      polaroid2: { top: vpheight*0.62, left: vpwidth*0.49, path: 'images/plitvice-polaroid.png', title: 'Plitvice Lakes, Croatia', height: '30vh'},
+      polaroid3: { top: vpheight*0.66, left: vpwidth*0.52, path: 'images/batur-polaroid.png', title: 'Mt Batur, Bali', height: '30vh'},
       ringOne: { top: vpheight*0.12, left: vpwidth*0.67, path: 'images/ringOne.png', title: "A Ring", height: '18vh'},
       ringTwo: { top: vpheight*0.19, left: vpwidth*0.63, path: 'images/ringOne.png', title: "Another Ring", height: '17vh'},
       // bookmark: { top: vpheight*-0.1, left: vpwidth*0.44, path: 'images/mark.png', title: 'bookmark', height: '80vh'}
