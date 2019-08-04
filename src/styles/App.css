@@ -86,6 +86,7 @@ font-family: 'League Script', cursive;
   width: 63vw;
   height: 60vh;
   color: rgb(19, 36, 19);
+  font-weight: bold;
   text-align: center;
   /* font-family: 'Pacifico', cursive; */
 }
@@ -114,7 +115,24 @@ font-family: 'League Script', cursive;
   border-bottom: #61dafb 1px dashed;
   font-family: 'League Script', cursive;
   font-size: 1em;
+  text-align: right;
+  font-weight: bold;
 }
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: rgba(27, 24, 24, 0.4);
+    font-weight: bold;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: rgba(27, 24, 24, 0.4);
+    font-weight: bold;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: rgba(27, 24, 24, 0.4); 
+    font-weight: bold;
+} 
 
 input:focus { 
   outline: none;
