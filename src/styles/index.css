@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Pacifico|Playfair+Display|Poiret+One&display=swap');
+/* font-family: 'Playfair Display', serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Poiret One', cursive; */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,6 +15,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  font-family: 'League Script', cursive; 
+  display: flex;
 }
 
 code {
@@ -17,20 +24,46 @@ code {
     monospace;
 }
 
-#orientation {
-  width: 100vw;
+#ori-warning {
+  display: flex;
+}
+
+.orientation {
+  /* font-family: 'Poiret One', cursive; */
+  font-family: 'Playfair Display', serif;
+/* font-family: 'Pacifico', cursive; */
+  width: 25vw;
+  color: rgba(4,20,3,0.7);
+  font-weight: bold;
   margin-top: 45vh;
-  margin-left: 25vw;
-  font-size: 1em;
+  font-size: 5vw;
+  z-index: 500;
   text-align: center;
 }
 
+#orientation-left {
+  margin-left: 20vw
+}
+
+#spacer {
+  width: 10vw;
+}
+
+/* #orientation-right {
+  text-align: left;
+} */
+
 @media (orientation: portrait) {
-  #orientation { display: block; }
+  .orientation { display: block; }
   .interaction  { display: none; }
   }
 
 @media (orientation: landscape) {
-  #orientation  { display: none; }
+  .orientation  { display: none; }
   .interaction { display: block; }
+}
+
+#modal {
+  display: flex;
+  align-content: center;
 }

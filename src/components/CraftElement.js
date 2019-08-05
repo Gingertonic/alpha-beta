@@ -7,11 +7,11 @@ const CraftElement = ({ path, title, height}) => {
     // position: 'absolute',
     // padding: '0.5rem 1rem',
     cursor: 'pointer',
-    height: height
+    width: height
   }
 
     // return <div style={{ ...styles }}>{title}</div>
-    return <img src={path} style={{ ...styles }} alt={title} />
+    return <img id={title} src={path} style={{ ...styles }} alt={title} />
 }
 
 export default CraftElement;

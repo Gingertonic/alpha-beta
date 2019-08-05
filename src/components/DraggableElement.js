@@ -26,8 +26,10 @@ const DraggableElement = props => {
     }),
   })
 
+  
+
   useEffect(() => {
-    preview(getEmptyImage(), { captureDraggingState: true })
+    preview(getEmptyImage(), { captureDraggingState: true });
   }, [])
 
 

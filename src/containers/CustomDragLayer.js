@@ -51,7 +51,7 @@ const CustomDragLayer = props => {
     return null
   }
   return (
-    <div style={layerStyles}>
+    <div id="drag-layer" style={layerStyles}>
       <div
         style={getItemStyles(initialOffset, currentOffset)}
       >

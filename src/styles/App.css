@@ -8,10 +8,7 @@ font-family: 'La Belle Aurore', cursive;
 font-family: 'Meddon', cursive;
 font-family: 'League Script', cursive; */
 
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Pacifico|Playfair+Display|Poiret+One&display=swap');
-/* font-family: 'Playfair Display', serif;
-font-family: 'Pacifico', cursive;
-font-family: 'Poiret One', cursive; */
+
 
 /* .App {
   text-align: center;
@@ -41,15 +38,11 @@ font-family: 'Poiret One', cursive; */
   /* text-shadow: 2px 2px silver; */
   /* font-family: 'Bad Script', cursive; */
   /* font-family: 'Homemade Apple', cursive; */
-font-family: 'League Script', cursive; 
+
 /* font-family: 'Playfair Display', serif; */
 /* font-family: 'Pacifico', cursive; */
 /* font-family: 'Poiret One', cursive; */
 
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -75,7 +68,7 @@ font-family: 'League Script', cursive;
 
 #rsvp {
   font-size: 3vh;
-  z-index: 0;
+  z-index: 2;
   /* margin-bottom: 20vh;
   margin-right: 30vh; */
   bottom: 0;
@@ -83,8 +76,8 @@ font-family: 'League Script', cursive;
   /* border: 1px solid palevioletred; */
   position: absolute;
   /* height: 30vh; */
-  width: 63vw;
-  height: 60vh;
+  width: 71vw;
+  height: 65vh;
   color: rgb(19, 36, 19);
   font-weight: bold;
   text-align: center;
@@ -153,17 +146,18 @@ input[type=checkbox] {
 
 input[type=checkbox]:after {
   content: " ";
-  background-color: rgba(10,250,10,0.3);
+  background-color: rgba(10,250,10,0.5);
   display: inline-block;
   margin-left: 10px;
   padding-bottom: 5px;
-  color: rgba(27, 24, 24, 0.8);
-  width: 1vw;
+  color: rgba(27, 24, 24, 0.7);
+  width: 1.5vw;
   height: 1vw;
   visibility: visible;
   /* border: 1px solid #; */
   padding-left: 3px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  transform: rotate(-6deg);
 }
 
 input[type=checkbox]:checked:after {
