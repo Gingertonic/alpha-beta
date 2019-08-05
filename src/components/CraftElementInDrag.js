@@ -4,15 +4,15 @@ import CraftElement from './CraftElement'
 
 
 const CraftElementInDrag = memo(({ path, title, height }) => {
-  const [tickTock, setTickTock] = useState(false)
-  
-  useEffect(
-    function subscribeToIntervalTick() {
-      const interval = setInterval(() => setTickTock(!tickTock), 500)
-      return () => clearInterval(interval)
-    },
-    [tickTock],
-  )
+    // const [tickTock, setTickTock] = useState(false)
+    
+    // useEffect(
+    //   function subscribeToIntervalTick() {
+    //     const interval = setInterval(() => setTickTock(!tickTock), 500)
+    //     return () => clearInterval(interval)
+    //   },
+    //   [tickTock],
+    // )
 
   const styles = {
     display: 'inline-block',

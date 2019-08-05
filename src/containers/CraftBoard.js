@@ -1,13 +1,9 @@
-// const renderCraftElements = elements.map((e, idx) => < CraftElement key={idx} idTag={e.idTag} text={e.text} dragIt={dragIt} moveIt={moveIt} allowDrop={allowDrop} dropIt={dropIt}/>)
-// {renderCraftElements}
 import React, { useCallback, useState, useEffect, changeOrientation } from 'react';
 import { useDrop } from 'react-dnd';
 import DraggableElement from '../components/DraggableElement';
-import CraftElement from '../components/CraftElement';
 import ElementTypes from '../elements';
 import OrientationWarning from '../components/OrientationWarning';
 import update from 'immutability-helper';
-import useOrientationChange from "use-orientation-change";
 import RSVP from './RSVP';
 
 function renderElement(item, key) {
@@ -15,9 +11,6 @@ function renderElement(item, key) {
 }
 
 const styles = {
-  // width: "100vw",
-  // height: "100vh",
-  // border: '1px solid black',
   position: 'relative',
 }
 
@@ -25,60 +18,6 @@ const CraftBoard = () => {
     const vpheight = window.innerHeight;
     const vpwidth = window.innerWidth;
 
-    
-
-    // const vpheight = useWindowSize().height;
-    // const vpwidth = useWindowSize().width;
-
-    // const [orientation, setOrientation] = useState('')
-
-    // useEffect(() => {
-    //   window.addEventListener('orientationchange', OrientationChange);
-    // }, []); 
-
-
-    // const [orientation, setOrientation] = useState({height: vpheight, width: vpwidth})
-
-    // const changeOrientation = () => {
-    //   console.log('changed')
-    //   setState({elements: {...state.elements}, orientation: {height: vpheight, width: vpwidth}})
-    // }
-
-    // function useWindowSize() {
-    //   const isClient = typeof window === 'object';
-    
-    //   function getSize() {
-    //     return {
-    //       width: isClient ? window.innerWidth : undefined,
-    //       height: isClient ? window.innerHeight : undefined
-    //     };
-    //   }
-    
-    //   const [windowSize, setWindowSize] = useState(getSize);
-    
-    //   useEffect(() => {
-    //     if (!isClient) {
-    //       return false;
-    //     }
-        
-    //     function handleResize() {
-    //       setWindowSize(getSize());
-    //     }
-    
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    //   }, []); // Empty array ensures that effect is only run on mount and unmount
-
-    
-    //   return windowSize;
-    // }
-
-    // function OrientationChange() {
-    //   const ori = useOrientationChange()
-    
-    //   setOrientation(ori)
-
-    // }
 
     const [elements, setElements] = useState({  
       // bookmark: { top: vpheight*-0.03, left: vpwidth*0.46, path: 'images/bookmark.png', title: 'bookmark', height: '60vh'},

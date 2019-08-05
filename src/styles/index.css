@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Pacifico|Playfair+Display|Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 /* font-family: 'Playfair Display', serif;
 font-family: 'Pacifico', cursive;
 font-family: 'Poiret One', cursive; */
@@ -29,9 +29,7 @@ code {
 }
 
 .orientation {
-  /* font-family: 'Poiret One', cursive; */
   font-family: 'Playfair Display', serif;
-/* font-family: 'Pacifico', cursive; */
   width: 25vw;
   color: rgba(4,20,3,0.7);
   font-weight: bold;
@@ -48,10 +46,6 @@ code {
 #spacer {
   width: 10vw;
 }
-
-/* #orientation-right {
-  text-align: left;
-} */
 
 @media (orientation: portrait) {
   .orientation { display: block; }

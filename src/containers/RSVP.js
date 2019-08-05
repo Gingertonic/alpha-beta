@@ -4,11 +4,6 @@ import UserID from '../secrets';
 
 
 const RSVP = () => {
-   
-    // const [name, status] = useState({
-    //     name: "",
-    //     status: "cannot"
-    // })
 
     const [details, setDetails] = useState({
         name: "",
