@@ -79,7 +79,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-input[type=checkbox]:after {
+input[type=checkbox] + span::after {
   content: " ";
   background-color: rgba(10,250,10,0.5);
   display: inline-block;
@@ -95,7 +95,7 @@ input[type=checkbox]:after {
   transform: rotate(-6deg);
 }
 
-input[type=checkbox]:checked:after {
+input[type=checkbox]:checked + span::after  {
   content: "\2714";
   padding: -5px;
   font-weight: bold;
@@ -104,3 +104,6 @@ input[type=checkbox]:checked:after {
 .interaction {
   z-index: 5;
 }
+
+/* input.custom-checkbox + label::before
+input.custom-checkbox:checked + label::after */

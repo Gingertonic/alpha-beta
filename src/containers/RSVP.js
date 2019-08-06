@@ -91,6 +91,8 @@ const RSVP = () => {
                         onChange={handleStatusChange}
                         className="form-check-input"
                     />
+                    <span>
+                    </span>
                     </label>
                 </div>
 
@@ -104,6 +106,8 @@ const RSVP = () => {
                         onChange={handleStatusChange}
                         className="form-check-input"
                     />
+                    <span>
+                    </span>
                     </label>
                 </div>
                 <br />
