@@ -2,7 +2,7 @@
   "name": "alpha-beta",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://thegingertonicstudios.com/alpha-beta/",
+  "homepage": "http://aki-beti.ga/save-the-date/",
   "dependencies": {
     "@material-ui/core": "^4.3.1",
     "emailjs-com": "^2.3.2",
