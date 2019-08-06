@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
@@ -7,12 +7,6 @@ import './styles/index.css';
 import './styles/App.css';
 import CraftBoard from './containers/CraftBoard';
 import CustomDragLayer from './containers/CustomDragLayer';
-import MessageModal from './containers/MessageModal';
-import RSVP from './containers/RSVP';
-import { Modal } from '@material-ui/core';
-import OrientationWarning from './components/OrientationWarning';
-
-// import RSVP from './containers/RSVP';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
@@ -20,26 +14,14 @@ function App() {
         alert("We're getting married!\n\nOfficial invites to come in Autumn but we'd love to know if you think you could come. Tick a green box and hit the Save the Date stamp to let us know.\n\nPlease enjoy rearranging the scrapbook too!\n(Best enjoyed on a non-mobile device!)\n\nLove, Beth & Aleksandar")
       })
 
-    //   const renderContent = (window.innerHeight > window.innerWidth) ? <CraftBoard /> : <OrientationWarning />
-
-    //   const [orientation, setOrientation] = useState(true)
-
-    // window.addEventListener('orientationchange', () => { 
-    //     const newOri = !orientation
-    //     setOrientation(newOri);
-    // })
 
     return (
 
         <div className="App">
-            {/* <DndProvider backend={HTML5Backend}> */}
             <DndProvider backend={TouchBackend} options={{enableMouseEvents: true}}>
                 <header className="App-header">
-                    {/* {renderContent} */}
                     <CraftBoard />
                     <CustomDragLayer />
-                  
-                    {/* <OrientationWarning /> */}
                 </header>
             </DndProvider>
             
